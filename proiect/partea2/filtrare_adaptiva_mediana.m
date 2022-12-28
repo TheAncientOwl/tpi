@@ -1,3 +1,4 @@
+%% Exemplu de apel: filtrare_adaptiva_mediana("LENNA.BMP");
 function [] = filtrare_adaptiva_mediana(filePath)
     %% ----------------------------- %%
     %%      [Part 1] Summary.        %%
