@@ -69,13 +69,15 @@ function [] = filtrare_adaptiva_mediana(filePath)
     %%     [Part 3] Summary.     %%
     %% >> Display the images.    %%
     %% ------------------------- %%
-    display_image(originalImg, "Imaginea Initiala");
-    display_image(noisyImg, "Imaginea perturbata cu sare si piper");
-    display_image(uint8(filteredImg),  "Imaginea filtrata");
+    lines = 1;
+    columns = 3;
+    plot_image(originalImg, "Imaginea Initiala", lines, columns, 1);
+    plot_image(noisyImg, "Imaginea perturbata cu sare si piper", lines, columns, 2);
+    plot_image(uint8(filteredImg),  "Imaginea filtrata", lines, columns, 3);
 end
 
-function [] = display_image(img, imgTitle)
-    figure
+function [] = plot_image(img, imgTitle, lines, columns, region)
+    subplot(lines, columns, region);
     imshow(img);
     title(imgTitle);
 end
